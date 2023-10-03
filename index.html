@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe_catalogue</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./Assets/Cookpal 1.png" alt="logo" class="logo">
+            <div class="links">
+            <a href="#" id="link1">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">About</a>
+            <img src="./Assets/Profile.png" alt="profile" class="profile">
+            </div>
+        </nav>
+    </header>
+<main>
+    <section class="hero-section">
+        <p class="hero-text" id="text1">Trending now</p>
+        <p class="hero-text" id="text2">Mike’s famous salad <br>
+            with cheese</p>
+            <p class="hero-text" id="text3">By John Mike</p>
+    </section>
+    <section id="search-box">
+        <h3>Search For Recipes</h3>
+     <div class="input-box">
+        <img src="./Assets/search 1.png" alt="icon">
+        <input type="text" placeholder="Search for recipes..." class="search">
+        <button id="button-search">
+            <img src="./Assets/li_search.png" alt="icon">
+
+        </button>
+     </div>
+        
+    </section>
+    <section id="menu-section">
+        <div class="top-section">
+            <div class="btn" id="btn1">
+                <button class="button">All Recipes</button>
+                <img src="./Assets/chevron.png" alt="icon">
+            </div>
+            <div class="btn" id="btn2">
+                <button class="button">Veg Recipes Only</button>
+                <img src="./Assets/chevron.png" alt="icon">  
+            </div>
+            <div class="btn" id="btn3">
+                <button class="button">Non Veg Recipes </button>
+                <img src="./Assets/chevron.png" alt="icon">
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="left-section">
+                <h3>Filters</h3>
+                <div>
+                    <label id="label">Rating</label>
+                    <br>
+                    <label for="rating" class="label">4 and Above</label>
+                    <input type="radio" id="above4" name="rating">
+                    <br>
+                    <label for="rating" class="label">Below 4</label>
+                    <input type="radio" id="below4" name="rating">
+                </div>
+            </div>
+            <div class="right-section">
+                <!-- Menu card will be added dynamically -->
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer-section">
+  <div class="footer-top">
+    <div id="div1">
+        <img src="./Assets/Cookpal 1.png" alt="image">
+        <p>Cookpal is a recipe website with a wide variety of delicious recipes, easy-to-use search function. Join our community and let's cook together!</p>
+    </div>
+    <div id="div2">
+        <h4>Company</h4>
+        <ul>
+            <li>Home</li>
+            <li>Explore</li>
+            <li>Team</li>
+            <li>About us</li>
+            <li>Activity</li>
+        </ul>
+    </div>
+    <div id="div3">
+        <h4>Resources</h4>
+        <ul>
+            <li>Blog</li>
+            <li>Use Cases</li>
+            <li>Testimonals</li>
+            <li>Insights</li>
+        </ul>
+    </div>
+    <div id="div4">
+        <img src="./Assets/Cookpal 1.png" alt="image">
+        <p>Ut risus mattis interdum faucibus facilisi. Facilisi purus accumsan aliquam.</p>
+        <div>
+            <input type="email" name="email" id="email" placeholder="  Your Email                                             @">
+            <button id="subscribe">Subscribe</button>
+        </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <img src="./Assets/Instagram.png" alt="image">
+    <img src="./Assets/Twitter.png" alt="image">
+    <img src="./Assets/Linkedin.png" alt="image">
+    <img src="./Assets/Facebook.png" alt="image">
+  </div>
+</footer>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
