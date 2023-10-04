@@ -191,18 +191,25 @@ border-radius: 16px;
     /* Shadow/shadow-sm */
     box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px 0px rgba(12, 26, 75, 0.24);
 }
-/* .last {
+.imageContainer{
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 8px;
-
-} */
-/* .last{
+}
+.container1{
     display: flex;
     justify-content: space-between;
-    margin: 10px;
-} */
+    align-items: center;
+    padding: 5px;
+}
+.container2{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+span{
+    margin-left: 120px;
+}
 .para1{
 color: #A1A1A1;
 font-family: Inter;
@@ -215,6 +222,12 @@ color: #252525;
 font-family: Inter;
 font-size: 10px;
 font-weight: 700;
+text-align: end;
+/* padding-bottom: 10px; */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 .para3{
@@ -279,44 +292,44 @@ column-gap: 15px;
 }
 /* Responsive design */
 @media (max-width: 767px) {
-    .card {
+    .hero-section{
       width: 70%;
     }
   
-    .card-content {
+    .hero-text{
       text-align: center;
     }
   
-    .card h2 {
+    #text2 {
       font-size: 1.2em; /* Adjust font size for heading on smaller screens */
       width: 100%;
     }
   
-    .card p {
+    #text3{
       font-size: 0.9em; /* Adjust font size for paragraph on smaller screens */
       width: 100%;
     }
-    .recipe-container {
+    .right-section {
       display: block;
     }
   
-    .button-container button {
+    .button {
       display: block;
       margin-bottom: 10px;
       width: 100%;
     }
   
-    .footer div {
+    #div1{
       flex: 1 1 45%;
       max-width: 45%;
     }
-    .ratings-card {
+    .bottom-section {
       display: block;
     }
   }
   
   @media (max-width: 576px) {
-    .footer div {
+    #div1{
       flex: 1 1 100%;
       max-width: 100%;
     }
@@ -337,14 +350,11 @@ column-gap: 15px;
   }
   
   /* Hover effect for buttons */
-  .button-container button:hover {
+  .button:hover {
     transform: translateY(-5px);
-  }
-  
-  /* Cursor hover effect for buttons */
-  .button-container button {
     cursor: pointer;
   }
+  
   
   /* Hover effect for recipe cards */
   .recipe-card:hover .image-container {

@@ -134,46 +134,60 @@ function generateRecipeCard(recipe) {
   const card = document.createElement("div");
   card.className = "card";
 
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "imageContainer";
   const image = document.createElement("img");
   image.src = recipe.imageSrc;
   image.className = "card-img"
-  card.appendChild(image);
-  
+  imageContainer.appendChild(image);
+  card.appendChild(imageContainer);
+
   const type = document.createElement("p");
   type.className = "para1";
   type.textContent = `${recipe.type}`;
   card.appendChild(type);
-  
+
+  const container1 = document.createElement("div");
+  container1.className = "container1";
   const name = document.createElement("h3");
   name.textContent = recipe.name;
-  card.appendChild(name);
+  container1.appendChild(name);
 
 
   const rating = document.createElement("p");
   rating.textContent = `⭐ ${recipe.rating}`;
   rating.className = "para2";
-  card.appendChild(rating);
-  
+  container1.appendChild(rating);
+  card.appendChild(container1);
+
+  const container2 = document.createElement("div");
+  container2.className = "container2";
   const time = document.createElement("p");
   time.textContent = `${recipe.time}`;
   time.className = "para3";
-  card.appendChild(time);
+  container2.appendChild(time);
+
   
   const likeButton = document.createElement("span");
   likeButton.className = "last"
   likeButton.innerHTML =`<img src="./Assets/comments.png" alt="icon"`;
   likeButton.addEventListener("click", () => {
-    recipe.isLiked = !recipe.isLiked;
-    likeButton.textContent = recipe.isLiked ? "❤️" : "🖤"; // Adjusted content
-
-  
-  });
-
-  // Initial content based on whether the recipe is liked or not
-  likeButton.textContent = recipe.isLiked ? "❤️" : "🖤";
-
-  card.appendChild(likeButton);
-
+      recipe.isLiked = !recipe.isLiked;
+      likeButton.textContent = recipe.isLiked ? "❤️" : "🖤"; // Adjusted content
+      
+    });
+    
+    // Initial content based on whether the recipe is liked or not
+    likeButton.textContent = recipe.isLiked ? "❤️" : "🖤";
+    
+    container2.appendChild(likeButton);
+    card.appendChild(container2);
+    
+    const comment = document.createElement("img");
+    comment.src='./Assets/comments.png';
+    comment.alt= 'icon';
+    comment.className = "comment";
+    container2.appendChild(comment);
   cardCatalog.appendChild(card);
 }
 
