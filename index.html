@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -33,10 +33,10 @@
         <h3>Search For Recipes</h3>
      <div class="input-box">
         <img src="./Assets/search 1.png" alt="icon">
-        <input type="text" placeholder="Search for recipes..." class="search">
-        <button id="button-search">
-            <img src="./Assets/li_search.png" alt="icon">
-
+        <input type="text" placeholder="Search for recipes..." class="search" id="searchBar">
+        <button id="button-search" onkeyup="displayRecipes()">
+            
+            <img src="./Assets/li_search.png"  onkeyup="displayRecipes()"alt="icon">
         </button>
      </div>
         
@@ -62,14 +62,14 @@
                 <div>
                     <label id="label">Rating</label>
                     <br>
-                    <label for="rating" class="label">4 and Above</label>
                     <input type="radio" id="above4" name="rating">
+                    <label for="rating" class="label">4 and Above</label>
                     <br>
-                    <label for="rating" class="label">Below 4</label>
                     <input type="radio" id="below4" name="rating">
+                    <label for="rating" class="label">Below 4</label>
                 </div>
             </div>
-            <div class="right-section">
+            <div class="right-section" id="cardCatalog">
                 <!-- Menu card will be added dynamically -->
             </div>
         </div>
